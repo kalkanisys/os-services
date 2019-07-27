@@ -1,5 +1,5 @@
 weave-net:
-  image: weaveworks/weave:2.5.2
+  image: kalkanisys/weave-net
   container_name: weave-net
   privileged: true
   labels:
