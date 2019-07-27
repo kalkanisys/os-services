@@ -1,4 +1,4 @@
-nginx:
+gateway:
     image: nginx:stable
     ports:
       - "80:80"
