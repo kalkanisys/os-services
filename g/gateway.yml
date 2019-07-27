@@ -1,0 +1,8 @@
+nginx:
+    image: nginx:stable
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ${GATEWAY_CONF}:/etc/nginx/nginx.conf
+      - ${GATEWAY_CERTS}:/certs

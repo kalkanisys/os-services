@@ -4,3 +4,4 @@ services:
 - jira
 - gitlab
 - certbot-cloudflare
+- gateway
