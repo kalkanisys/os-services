@@ -1,0 +1,13 @@
+jira:
+    image: cptactionhank/atlassian-jira-software:8.0.2
+    hostname: jira
+    links:
+      - postgresql
+    environment:
+      - X_PROXY_NAME
+      - X_PROXY_PORT
+      - X_PROXY_SCHEME
+    volumes:
+      - ${JIRA_DATA}:/var/atlassian/jira
+    labels:
+      io.rancher.os.after: postgresql

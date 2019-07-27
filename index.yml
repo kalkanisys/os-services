@@ -1,0 +1,6 @@
+services:
+- postgresql
+- mysql
+- jira
+- gitlab
+- certbot-cloudflare

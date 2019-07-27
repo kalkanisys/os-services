@@ -1,0 +1,7 @@
+postgresql:
+    image: postgres:9.5
+    user: "0:0"
+    environment:
+      - POSTGRES_*
+    volumes:
+      - ${POSTGRES_DATA}:/var/lib/postgresql/data

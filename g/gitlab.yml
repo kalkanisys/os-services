@@ -1,0 +1,11 @@
+gitlab:
+  image: 'gitlab/gitlab-ce:11.8.1-ce.0'
+  hostname: '${GITLAB_HOSTNAME}'
+  environment:
+    - GITLAB_*
+  ports:
+    - '${GITLAB_SSH_PORT}:22'
+  volumes:
+    - '${GITLAB_DATA_CONFIG}:/etc/gitlab'
+    - '${GITLAB_DATA_LOGS}:/var/log/gitlab'
+    - '${GITLAB_DATA}:/var/opt/gitlab'

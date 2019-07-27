@@ -1,0 +1,15 @@
+certbot-cloudflare:
+  image: 'certbot/dns-cloudflare:latest'
+  entrypoint:
+    - certbot
+    - --dns-cloudflare
+    - --dns-cloudflare-credentials
+    - /cloudflare.ini
+  command: 'renew'
+  # labels:
+    # io.rancher.os.scope: "system"
+    #cron.schedule: "0 0 19 * * *"
+  volumes:
+    - '${LETSENCRYPT_CF_INI}:/cloudflare.ini:ro'
+    - '${LETSENCRYPT_DATA}:/etc/letsencrypt'
+    - '${LETSENCRYPT_DATA_LOG}:/var/logs/letsencrypt'
