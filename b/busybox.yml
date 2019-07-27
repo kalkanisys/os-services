@@ -1,4 +1,4 @@
 busybox:
     image: busybox
     container_name: busybox
-    net: ${GATEWAY_NET:-bridge}
+    net: ${BUSYBOX_NET}

@@ -10,4 +10,4 @@ jira:
     labels:
       io.rancher.os.before: gateway
       io.rancher.os.after: postgresql
-    net: ${GATEWAY_NET}
+    net: ${JIRA_NET}

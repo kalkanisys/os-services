@@ -10,6 +10,6 @@ gitlab:
     - '${GITLAB_DATA_CONFIG}:/etc/gitlab'
     - '${GITLAB_DATA_LOGS}:/var/log/gitlab'
     - '${GITLAB_DATA}:/var/opt/gitlab'
-  net: ${GATEWAY_NET}
+  net: ${GITLAB_NET}
   labels:
       io.rancher.os.before: gateway

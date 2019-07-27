@@ -7,4 +7,4 @@ mysql:
     - ${MYSQL_DATA}:/var/lib/mysql
   labels:
       io.rancher.os.before: gateway
-  net: ${GATEWAY_NET}
+  net: ${MYSQL_NET}
