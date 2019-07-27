@@ -6,3 +6,4 @@ services:
 - certbot-cloudflare
 - gateway
 - weave-net
+- busybox

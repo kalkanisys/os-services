@@ -8,3 +8,4 @@ postgresql:
       - ${POSTGRES_DATA}:/var/lib/postgresql/data
     labels:
       io.rancher.os.before: gateway
+    net: ${GATEWAY_NET}

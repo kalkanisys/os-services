@@ -7,3 +7,4 @@ gateway:
     volumes:
       - ${GATEWAY_CONF}:/etc/nginx/nginx.conf
       - ${GATEWAY_CERTS}:/certs
+    net: ${GATEWAY_NET}
