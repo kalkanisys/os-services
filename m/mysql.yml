@@ -1,6 +1,9 @@
 mysql:
   image: mysql:5.7
+  container_name: mysql
   environment:
     - MYSQL_*
   volumes:
     - ${MYSQL_DATA}:/var/lib/mysql
+  labels:
+      io.rancher.os.before: gateway

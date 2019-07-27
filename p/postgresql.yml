@@ -1,7 +1,10 @@
 postgresql:
     image: postgres:9.5
+    container_name: postgresql
     user: "0:0"
     environment:
       - POSTGRES_*
     volumes:
       - ${POSTGRES_DATA}:/var/lib/postgresql/data
+    labels:
+      io.rancher.os.before: gateway

@@ -1,6 +1,7 @@
 gitlab:
   image: 'gitlab/gitlab-ce:11.8.1-ce.0'
-  hostname: '${GITLAB_HOSTNAME}'
+  container_name: gitlab
+  # hostname: '${GITLAB_HOSTNAME}'
   environment:
     - GITLAB_*
   ports:
@@ -9,3 +10,5 @@ gitlab:
     - '${GITLAB_DATA_CONFIG}:/etc/gitlab'
     - '${GITLAB_DATA_LOGS}:/var/log/gitlab'
     - '${GITLAB_DATA}:/var/opt/gitlab'
+  labels:
+      io.rancher.os.before: gateway

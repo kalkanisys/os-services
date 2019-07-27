@@ -1,0 +1,10 @@
+weave-net:
+  image: weaveworks/weave:2.5.2
+  container_name: weave-net
+  privileged: true
+  labels:
+    io.rancher.os.scope: system
+    io.rancher.os.after: docker,console
+  volumes_from:
+    - all-volumes
+  net: host

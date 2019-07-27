@@ -5,3 +5,4 @@ services:
 - gitlab
 - certbot-cloudflare
 - gateway
+- weave-net
