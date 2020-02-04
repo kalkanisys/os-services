@@ -1,5 +1,5 @@
 gitlab:
-  image: 'gitlab/gitlab-ce:11.8.1-ce.0'
+  image: 'gitlab/gitlab-ce:12.7.5-ce.0'
   container_name: gitlab
   # hostname: '${GITLAB_HOSTNAME}'
   environment:
